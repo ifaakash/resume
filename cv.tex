@@ -3,7 +3,7 @@
 \documentclass[a4paper,12pt]{article}
 
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage[skip=0pt]{parskip}
 
 %other packages for formatting
 \RequirePackage{color}
@@ -16,6 +16,7 @@
 
 %for lists within experience section
 \usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
 
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
@@ -34,7 +35,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{6pt}{4pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -77,17 +78,13 @@
 \href{https://in.linkedin.com/in/aakash-choudhary-a8b999192}{\raisebox{-0.05\height}\faLinkedin\ Aakash} \ $|$ \
 \href{mailto:aakashc.work@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ aakashc.work@gmail.com} \ $|$ \
 \href{tel:+91-9027219749}{\raisebox{-0.05\height}\faMobile\ +91-9027219749} \ $|$ \
-\href{https://medium.com/@aakashc.dev}{\raisebox{-0.05\height}\faMedium\ @aakashc.dev} \\
+\href{https://medium.com/@aakashc.dev}{\raisebox{-0.05\height}\faMedium\ @aakashc.dev} \ $|$ \
+\href{https://github.com/ifaakash}{\raisebox{-0.05\height}\faGithub\ ifaakash} \\
 \end{tabularx}
-
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
 \section{Summary}
 Results-driven SRE/DevOps Engineer with 4+ years of experience in cloud infrastructure automation, CI/CD, and container orchestration across AWS and Azure. Proficient in Terraform, Docker, Kubernetes, and ECS for scalable, highly available deployments. Experienced in FinOps practices, AWS MAP program management, and data engineering with Azure Data Factory. Exploring GenAI/LLM-powered automation to enhance monitoring, debugging, and operational workflows.
-
-\enlargethispage{2\baselineskip}
-
-%\vspace{0.5em} % Adjust the value as needed
 \section{Work Experience}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{DevOps Engineer, Particle41} & \hfill \text{Feb 2025 - Present} \\[3.75pt]
@@ -103,7 +100,9 @@ Results-driven SRE/DevOps Engineer with 4+ years of experience in cloud infrastr
 \item Integrated SonarCloud and CodeRabbit into the CI pipeline, enabling automated and secure code quality analysis on pull requests, reducing code review effort by almost 80\%.
 \item Architected and deployed AWS ECS-based services for highly available infrastructure, ensuring seamless scaling and fault tolerance for production workloads.
 \item Led AWS MAP (Migration Acceleration Program) funding initiatives, collaborating with the AWS Cost team to align business requirements with cost optimization strategies and secure project funding.
+\item Managed database migrations using AWS DMS and Amazon MSK, enabling reliable streaming and replication of large-scale data across heterogeneous environments with minimal downtime.
 \item Integrated GenAI/LLM tools into batch scripts to enhance monitoring alerting, automate log analysis, and accelerate debugging workflows across environments.
+\item Delivered DevOps and cloud infrastructure solutions for clients including Outcomes (healthcare/pharmacy technology platform serving 48,000+ pharmacies) and Optic Systems (property inspection technology company leveraging GPS and 360-degree video systems).
 \end{itemize}
 } \\
 \textbf{SRE/DevOps Engineer, Sopra Steria India} & \hfill \text{July 2022 - Feb 2025} \\[3.75pt]
@@ -123,11 +122,23 @@ Results-driven SRE/DevOps Engineer with 4+ years of experience in cloud infrastr
 %	PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Projects}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{\href{https://github.com/ifaakash/QuickSpin}{Quick Spin}} & \hfill \\
 \multicolumn{2}{@{}X@{}}{
 \begin{itemize}[leftmargin=*]
 \item Built an EC2 launch pad that combines Terraform and Ansible, allowing users to define instance count, type (public/private), and software dependencies (Java, NGINX, Apache, OpenSSH) in a single YAML file — deploying fully configured instances with one click.
+\end{itemize}
+} \\
+\textbf{\href{https://github.com/ifaakash/ai_commit}{AI Committer}} & \hfill \\
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item CLI tool that suggests Git commit messages using a locally-run LLM or API key, streamlining version control workflows for the DevOps team.
+\end{itemize}
+} \\
+\textbf{\href{https://github.com/ifaakash/gh-prune}{GitHub Pruner}} & \hfill \\
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item CLI tool that cleans up GitHub Actions cache, workflow lists, and stale runs to keep repository history tidy and reduce storage overhead.
 \end{itemize}
 } \\
 \textbf{Raspberry Pi Homelab} & \hfill \\
@@ -142,8 +153,8 @@ Results-driven SRE/DevOps Engineer with 4+ years of experience in cloud infrastr
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}>{\bfseries}l X@{}}
-Cloud Platforms: & AWS (EC2, S3, VPC, IAM, RDS, ECS, Glue, Lambda, EKS, CloudWatch), Azure (VMs, AKS, Blob Storage, VNets, Azure AD) \\
-Data Engineering: & Azure Data Factory, Azure Data Lake Storage \\
+Cloud Platforms: & AWS (EC2, S3, VPC, IAM, RDS, ECS, Glue, Lambda, EKS, DMS, MSK, CloudWatch), Azure (VMs, AKS, Blob Storage, VNets, Azure AD) \\
+Data Engineering: & Azure Data Factory, Azure Data Lake Storage, AWS DMS, Amazon MSK \\
 Infrastructure as Code (IaC): & Terraform (Cloud resource configurations) \\
 Containerization \& Orchestration: & Docker, Kubernetes (EKS/ECS), k3s \\
 CI/CD: & GitHub Actions, GitLab CI/CD, AWS CodePipeline \\
@@ -173,7 +184,6 @@ Database Technologies: & SQL (Database management, querying) \\
 \item AWS Certified Solutions Architect – Associate
 \end{itemize}
 \end{tabularx}
-
 \section{Additional Roles \& Contributions}
 \begin{tabularx}{\linewidth}{@{}l X@{}} 
 \textbf{Technical Writer, Plain English} & \hfill \text{June 2025 – Present} \\
@@ -181,10 +191,8 @@ Database Technologies: & SQL (Database management, querying) \\
 \begin{itemize}[leftmargin=*]
 \item Writing and publishing technical articles for a Medium publication with over 3.5M+ readers, focusing on DevOps, cloud infrastructure, and automation.
 \end{itemize}
-} 
+}
 \end{tabularx}
-
-
 \section{Professional Interests}
 \begin{tabularx}{\linewidth}{@{}X@{}}
 \begin{itemize}[leftmargin=*]
@@ -195,5 +203,4 @@ Database Technologies: & SQL (Database management, querying) \\
 \item Building open-source tools that improve DevOps workflows and infrastructure efficiency.
 \end{itemize}
 \end{tabularx}
-
 \end{document}
