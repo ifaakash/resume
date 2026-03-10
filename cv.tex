@@ -1,0 +1,197 @@
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Aakash Choudhary} \\[7.5pt]
+\small
+\href{https://in.linkedin.com/in/aakash-choudhary-a8b999192}{\raisebox{-0.05\height}\faLinkedin\ Aakash} \ $|$ \
+\href{mailto:aakashc.work@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ aakashc.work@gmail.com} \ $|$ \
+\href{tel:+91-9027219749}{\raisebox{-0.05\height}\faMobile\ +91-9027219749} \ $|$ \
+\href{https://medium.com/@aakashc.dev}{\raisebox{-0.05\height}\faMedium\ @aakashc.dev} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+\section{Summary}
+Results-driven SRE/DevOps Engineer with 4 years of experience automating infrastructure and optimizing data workflows. Skilled in AWS, Azure, IaC, CI/CD, and container orchestration. Experienced in data engineering with Azure Data Factory and Databricks, delivering scalable pipelines and reliable processing. Collaborative problem-solver passionate about innovation, efficiency, and building resilient cloud systems.
+
+\enlargethispage{2\baselineskip}
+
+%\vspace{0.5em} % Adjust the value as needed
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{DevOps Engineer, Particle41} & \hfill \text{Feb 2025 - Present} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item Managed cloud infrastructure using Terraform, GitHub Actions, and Helm charts, leading to a 30\% improvement in deployment efficiency and infrastructure consistency across environments.
+\item Deployed and maintained Azure Data Factory and Databricks components, improving data processing reliability by 50\% and reducing ETL failure rates.
+\item Enabled migration of large-scale databases (~1 TB) with minimal downtime, handling both homogeneous and heterogeneous migrations.
+\item Migrated applications from .NET Core to .NET Framework, containerized them, and deployed using AWS CodePipeline and CodeBuild.
+\item Built Docker images in CodeBuild and managed complex networking setups where all traffic was routed via AWS Transit Gateway, ensuring secure and efficient data flow.
+\item Designed and implemented cost-saving strategies for low-traffic or idle virtual machines, achieving up to 40\% monthly cost reduction in non-critical workloads.
+\item Created robust CI/CD pipelines with automated triggers and branching strategies, decreasing deployment time by 50\% and enhancing release reliability.
+\item Integrated SonarCloud and CodeRabbit into the CI pipeline, enabling automated and secure code quality analysis on pull requests, reducing code review effort by almost 80\%.
+\end{itemize}
+} \\
+\textbf{SRE/DevOps Engineer, Sopra Steria India} & \hfill \text{July 2022 - Feb 2025} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item Led and implemented enterprise-wide DevOps initiatives, including migration of on-premises infrastructure to AWS and Azure cloud platforms, resulting in improved scalability and 25\% cost reduction through automated resource management.
+\item Built and optimized CI/CD pipelines with GitLab CI/CD, reducing deployment time by 35\%.
+\item Designed microservices architecture with Docker, EKS/AKS, and Helm, improving availability by 50\%.
+\item Established comprehensive monitoring and observability framework using Prometheus, Grafana, and Datadog, implementing custom dashboards and alerting policies that improved incident response time by 25\% and enabled proactive system health management.
+\item Implemented Infrastructure as Code using Terraform for multi-cloud environments, creating reusable modules and automating configuration management, reducing manual intervention by 50\% and achieving consistent infrastructure deployment.
+\item Developed and maintained automation scripts using Python, Bash, and PowerShell for routine operational tasks, including log analysis and security compliance checks, improving team efficiency by 30\%.
+\end{itemize}
+} \\
+\textbf{Associate Engineer, Indus Valley Partners} & \hfill \text{Oct 2021 - May 2022} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item Developed and optimized SQL Server database schemas and stored procedures, leading to a 15\% enhancement in query performance and overall database efficiency.
+% \item Utilized MS SQL, SQL Server, and C# to implement data-driven solutions, facilitating improved data reporting and business intelligence capabilities.
+
+
+\end{itemize}
+}
+\end{tabularx}
+\vspace{-\baselineskip} % Reduce space after the section
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}l X@{}}
+Cloud Platforms: & AWS (EC2, S3, VPC, IAM, RDS, ECS, Glue, Lambda, EKS, CloudWatch), Azure (VMs, AKS, Blob Storage, VNets, Azure AD) \\
+Data Engineering: & Azure Data Factory, Azure Data Lake Storage \\
+Infrastructure as Code (IaC): & Terraform (Cloud resource configurations) \\
+Containerization and Orchestration: & Docker, Kubernetes (EKS management), Helm \\
+CI/CD: & Github Action, GitLab CI/CD\\
+Configuration Management: & Ansible (Playbook automation, role management) \\
+Monitoring and Observability: & Prometheus (Monitoring, alerting), Grafana (Visualization), Datadog, Coralogix, Sentry \\
+Scripting/Programming Languages: & Bash (Automation scripting), Java (Automation, development), Python \\
+Version Control Systems: & Git (Version control, branching, merging) \\
+Database Technologies: & SQL (Database management, querying) \\
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\textbf{Bachelor’s Degree in Computer Science and Engineering (CSE)}, ABESIT & \hfill \normalsize (2018 - 2022) \\
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}X@{}}
+\begin{itemize}[leftmargin=*]\setlength{\itemsep}{0pt}
+\item HashiCorp Certified: Terraform Associate (003) \href{https://www.credly.com/badges/f1d5c44f-f2c8-4e31-93eb-f94f44282e97/linked_in_profile?trk=public_profile_certification-title}{click here}
+\item Microsoft Certified: Azure Fundamentals AZ-900 \href{https://www.credly.com/badges/18cfe8ff-55b4-45cf-8ba6-9b3c17c51133/linked_in_profile?trk=public_profile_see-credential}{click here}
+\item AWS Certified Solutions Architect – Associate
+\end{itemize}
+\end{tabularx}
+
+\section{Additional Roles \& Contributions}
+\begin{tabularx}{\linewidth}{@{}l X@{}} 
+\textbf{Technical Writer, Plain English} & \hfill \text{June 2025 – Present} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item Writing and publishing technical articles for a Medium publication with over 3.5M+ readers, focusing on DevOps, cloud infrastructure, and automation.
+\end{itemize}
+} 
+\end{tabularx}
+
+
+\section{Professional Interests}
+\begin{tabularx}{\linewidth}{@{}X@{}}
+\begin{itemize}[leftmargin=*]
+\item Technical writing at platform like Medium, dev.to
+\item Actively involved in cost optimization initiatives, including FinOps practices for cloud environments.
+\item Keen on developing open source tools that improve DevOps workflows and infrastructure efficiency.
+\end{itemize}
+\end{tabularx}
+
+%	SOFT SKILLS
+ % Reduce space before the section
+\section{Soft Skills}
+\begin{tabularx}{\linewidth}{@{}X@{}}
+\begin{itemize}[leftmargin=*]
+\item Effective collaboration with cross-functional teams
+\item Adaptability to new technologies and challenges 
+\item Resilience in the face of setbacks or obstacles 
+\end{itemize}
+\end{tabularx}
+\vspace{-\baselineskip} % Reduce space after the section
+\end{document}
