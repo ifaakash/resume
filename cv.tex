@@ -3,7 +3,9 @@
 \documentclass[a4paper,12pt]{article}
 
 \usepackage{url}
-\usepackage[skip=0pt]{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
 
 %other packages for formatting
 \RequirePackage{color}
@@ -36,6 +38,9 @@
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{6pt}{4pt}
+\makeatletter
+\renewcommand{\@secpenalty}{10000}
+\makeatother
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
