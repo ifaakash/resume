@@ -83,7 +83,7 @@
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
 \section{Summary}
-Results-driven SRE/DevOps Engineer with 4 years of experience automating infrastructure and optimizing data workflows. Skilled in AWS, Azure, IaC, CI/CD, and container orchestration. Experienced in data engineering with Azure Data Factory and Databricks, delivering scalable pipelines and reliable processing. Collaborative problem-solver passionate about innovation, efficiency, and building resilient cloud systems.
+Results-driven SRE/DevOps Engineer with 4+ years of experience in cloud infrastructure automation, CI/CD, and container orchestration across AWS and Azure. Proficient in Terraform, Docker, Kubernetes, and ECS for scalable, highly available deployments. Experienced in FinOps practices, AWS MAP program management, and data engineering with Azure Data Factory. Exploring GenAI/LLM-powered automation to enhance monitoring, debugging, and operational workflows.
 
 \enlargethispage{2\baselineskip}
 
@@ -93,7 +93,7 @@ Results-driven SRE/DevOps Engineer with 4 years of experience automating infrast
 \textbf{DevOps Engineer, Particle41} & \hfill \text{Feb 2025 - Present} \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{itemize}[leftmargin=*]
-\item Managed cloud infrastructure using Terraform, GitHub Actions, and Helm charts, leading to a 30\% improvement in deployment efficiency and infrastructure consistency across environments.
+\item Managed cloud infrastructure using Terraform and GitHub Actions, leading to a 30\% improvement in deployment efficiency and infrastructure consistency across environments.
 \item Deployed and maintained Azure Data Factory and Databricks components, improving data processing reliability by 50\% and reducing ETL failure rates.
 \item Enabled migration of large-scale databases (~1 TB) with minimal downtime, handling both homogeneous and heterogeneous migrations.
 \item Migrated applications from .NET Core to .NET Framework, containerized them, and deployed using AWS CodePipeline and CodeBuild.
@@ -101,6 +101,9 @@ Results-driven SRE/DevOps Engineer with 4 years of experience automating infrast
 \item Designed and implemented cost-saving strategies for low-traffic or idle virtual machines, achieving up to 40\% monthly cost reduction in non-critical workloads.
 \item Created robust CI/CD pipelines with automated triggers and branching strategies, decreasing deployment time by 50\% and enhancing release reliability.
 \item Integrated SonarCloud and CodeRabbit into the CI pipeline, enabling automated and secure code quality analysis on pull requests, reducing code review effort by almost 80\%.
+\item Architected and deployed AWS ECS-based services for highly available infrastructure, ensuring seamless scaling and fault tolerance for production workloads.
+\item Led AWS MAP (Migration Acceleration Program) funding initiatives, collaborating with the AWS Cost team to align business requirements with cost optimization strategies and secure project funding.
+\item Integrated GenAI/LLM tools into batch scripts to enhance monitoring alerting, automate log analysis, and accelerate debugging workflows across environments.
 \end{itemize}
 } \\
 \textbf{SRE/DevOps Engineer, Sopra Steria India} & \hfill \text{July 2022 - Feb 2025} \\[3.75pt]
@@ -108,26 +111,32 @@ Results-driven SRE/DevOps Engineer with 4 years of experience automating infrast
 \begin{itemize}[leftmargin=*]
 \item Led and implemented enterprise-wide DevOps initiatives, including migration of on-premises infrastructure to AWS and Azure cloud platforms, resulting in improved scalability and 25\% cost reduction through automated resource management.
 \item Built and optimized CI/CD pipelines with GitLab CI/CD, reducing deployment time by 35\%.
-\item Designed microservices architecture with Docker, EKS/AKS, and Helm, improving availability by 50\%.
+\item Designed microservices architecture with Docker and EKS/AKS, improving availability by 50\%.
 \item Established comprehensive monitoring and observability framework using Prometheus, Grafana, and Datadog, implementing custom dashboards and alerting policies that improved incident response time by 25\% and enabled proactive system health management.
 \item Implemented Infrastructure as Code using Terraform for multi-cloud environments, creating reusable modules and automating configuration management, reducing manual intervention by 50\% and achieving consistent infrastructure deployment.
 \item Developed and maintained automation scripts using Python, Bash, and PowerShell for routine operational tasks, including log analysis and security compliance checks, improving team efficiency by 30\%.
 \end{itemize}
 } \\
-\textbf{Associate Engineer, Indus Valley Partners} & \hfill \text{Oct 2021 - May 2022} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{itemize}[leftmargin=*]
-\item Developed and optimized SQL Server database schemas and stored procedures, leading to a 15\% enhancement in query performance and overall database efficiency.
-% \item Utilized MS SQL, SQL Server, and C# to implement data-driven solutions, facilitating improved data reporting and business intelligence capabilities.
-
-
-\end{itemize}
-}
 \end{tabularx}
 \vspace{-\baselineskip} % Reduce space after the section
 %----------------------------------------------------------------------------------------
-%	TECHNICAL SKILLS
+%	PROJECTS
 %----------------------------------------------------------------------------------------
+\section{Projects}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{\href{https://github.com/ifaakash/QuickSpin}{Quick Spin}} & \hfill \\
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item Built an EC2 launch pad that combines Terraform and Ansible, allowing users to define instance count, type (public/private), and software dependencies (Java, NGINX, Apache, OpenSSH) in a single YAML file — deploying fully configured instances with one click.
+\end{itemize}
+} \\
+\textbf{Raspberry Pi Homelab} & \hfill \\
+\multicolumn{2}{@{}X@{}}{
+\begin{itemize}[leftmargin=*]
+\item Set up a self-hosted infrastructure on Raspberry Pi running Forgejo (Git forge) and k3s (lightweight Kubernetes), managing networking and port configurations for hands-on DevOps experimentation.
+\end{itemize}
+}
+\end{tabularx}
 %----------------------------------------------------------------------------------------
 %	TECHNICAL SKILLS
 %----------------------------------------------------------------------------------------
@@ -136,12 +145,14 @@ Results-driven SRE/DevOps Engineer with 4 years of experience automating infrast
 Cloud Platforms: & AWS (EC2, S3, VPC, IAM, RDS, ECS, Glue, Lambda, EKS, CloudWatch), Azure (VMs, AKS, Blob Storage, VNets, Azure AD) \\
 Data Engineering: & Azure Data Factory, Azure Data Lake Storage \\
 Infrastructure as Code (IaC): & Terraform (Cloud resource configurations) \\
-Containerization and Orchestration: & Docker, Kubernetes (EKS management), Helm \\
-CI/CD: & Github Action, GitLab CI/CD\\
+Containerization \& Orchestration: & Docker, Kubernetes (EKS/ECS), k3s \\
+CI/CD: & GitHub Actions, GitLab CI/CD, AWS CodePipeline \\
 Configuration Management: & Ansible (Playbook automation, role management) \\
-Monitoring and Observability: & Prometheus (Monitoring, alerting), Grafana (Visualization), Datadog, Coralogix, Sentry \\
-Scripting/Programming Languages: & Bash (Automation scripting), Java (Automation, development), Python \\
-Version Control Systems: & Git (Version control, branching, merging) \\
+Monitoring \& Observability: & Prometheus, Grafana, Datadog, Coralogix, Sentry \\
+Linux \& Networking: & Linux administration, networking fundamentals, port management, firewall configuration \\
+Scripting/Programming: & Bash (Automation scripting), Python, Java \\
+GenAI/LLM: & LLM-powered automation in shell scripts, AI-assisted debugging and monitoring \\
+Version Control: & Git, Forgejo (self-hosted) \\
 Database Technologies: & SQL (Database management, querying) \\
 \end{tabularx}
 %----------------------------------------------------------------------------------------
@@ -177,21 +188,12 @@ Database Technologies: & SQL (Database management, querying) \\
 \section{Professional Interests}
 \begin{tabularx}{\linewidth}{@{}X@{}}
 \begin{itemize}[leftmargin=*]
-\item Technical writing at platform like Medium, dev.to
-\item Actively involved in cost optimization initiatives, including FinOps practices for cloud environments.
-\item Keen on developing open source tools that improve DevOps workflows and infrastructure efficiency.
+\item Technical writing on platforms like Medium and dev.to, covering DevOps, cloud, and automation topics.
+\item FinOps practices and cloud cost optimization for production environments.
+\item Exploring GenAI/LLM integration to elevate DevOps automation and observability workflows.
+\item Self-hosting and homelab experimentation with Raspberry Pi, Forgejo, and k3s.
+\item Building open-source tools that improve DevOps workflows and infrastructure efficiency.
 \end{itemize}
 \end{tabularx}
 
-%	SOFT SKILLS
- % Reduce space before the section
-\section{Soft Skills}
-\begin{tabularx}{\linewidth}{@{}X@{}}
-\begin{itemize}[leftmargin=*]
-\item Effective collaboration with cross-functional teams
-\item Adaptability to new technologies and challenges 
-\item Resilience in the face of setbacks or obstacles 
-\end{itemize}
-\end{tabularx}
-\vspace{-\baselineskip} % Reduce space after the section
 \end{document}
