@@ -21,20 +21,19 @@
 \setlist[itemize]{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
 
 % centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
-\usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
 %custom \section
-\usepackage{titlesec}				
+\usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
+%CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{6pt}{4pt}
@@ -50,8 +49,6 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
 %for social icons
 \usepackage{fontawesome5}
 
@@ -62,10 +59,8 @@
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
-
-
 % non-numbered pages
-\pagestyle{empty} 
+\pagestyle{empty}
 
 %----------------------------------------------------------------------------------------
 %	TITLE
@@ -111,9 +106,8 @@ Results-driven SRE/DevOps Engineer with 4+ years of experience in cloud infrastr
 \item Established monitoring and observability framework using Prometheus, Grafana, and Datadog, improving incident response time by 25\% through custom dashboards and alerting.
 \item Implemented multi-cloud IaC with Terraform, creating reusable modules that reduced manual intervention by 50\% and ensured consistent deployments.
 \end{itemize}
-} \\
+}
 \end{tabularx}
-\vspace{-\baselineskip} % Reduce space after the section
 %----------------------------------------------------------------------------------------
 %	PROJECTS
 %----------------------------------------------------------------------------------------
@@ -166,7 +160,7 @@ Database Technologies: & SQL (Database management, querying) \\
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Bachelor’s Degree in Computer Science and Engineering (CSE)}, ABESIT & \hfill \normalsize (2018 - 2022) \\
 \end{tabularx}
 %----------------------------------------------------------------------------------------
@@ -181,7 +175,7 @@ Database Technologies: & SQL (Database management, querying) \\
 \end{itemize}
 \end{tabularx}
 \section{Additional Roles \& Contributions}
-\begin{tabularx}{\linewidth}{@{}l X@{}} 
+\begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Technical Writer, Plain English} & \hfill \text{June 2025 – Present} \\
 \multicolumn{2}{@{}X@{}}{
 \begin{itemize}[leftmargin=*]
